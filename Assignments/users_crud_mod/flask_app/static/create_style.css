@@ -1,0 +1,17 @@
+body {
+    width: 900px;
+    margin:150px auto;
+}
+
+.header {
+    display:flex;
+    justify-content: space-between;
+}
+
+label, input {
+    margin:10px;
+}
+
+input {
+    display:block;
+}
