@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja Gold</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2 class="rj" id="gold_amt">Your gold: {{ gold_count }} </h2>
+                <h2 id="move_num">Moves remaining: {{ moves }} </h2>
+            </div>
+            <div class="action-row">
+                <div class="action-box" id="farm">
+                    <h2>Farm</h2>
+                    <h3>(earns 10-20 Berries)</h3>
+                    <form action="/process_money" method="post">
+                        <input type="hidden" name="location" value="farm" />
+                        <input class="btn" type="submit" value="Find Berries!"/>
+                    </form> 
+                </div>
+                <div class="action-box" id="cave">
+                    <h2>Cave</h2>
+                    <h3>(earns 5-10 Berries)</h3>
+                    <form action="/process_money" method="post">
+                        <input type="hidden" name="location" value="cave" />
+                        <input class="btn" type="submit" value="Find Berries!"/>
+                    </form> 
+                </div>
+                <div class="action-box" id="house">
+                    <h2>House</h2>
+                    <h3>(earns 2-5 Berries)</h3>
+                    <form action="/process_money" method="post">
+                        <input type="hidden" name="location" value="house" />
+                        <input class="btn" type="submit" value="Find Berries!"/>
+                    </form> 
+                </div>
+                <div class="action-box" id="casino">
+                    <h2>Casino</h2>
+                    <h3>(earns OR takes 0-50 Berries)</h3>
+                    <form action="/process_money" method="post">
+                        <input type="hidden" name="location" value="casino" />
+                        <input class="btn" type="submit" value="Find Berries!"/>
+                    </form> 
+                </div>
+            </div>
+            <div class="activity">
+                <h3 class="rj">Activities:</h3>
+                <div class="text-box"> 
+                        {{ activities | safe }}
+                </div>
+            </div>
+            {{ game_reset | safe }}           
+        </div>
+    </body>
+</html>

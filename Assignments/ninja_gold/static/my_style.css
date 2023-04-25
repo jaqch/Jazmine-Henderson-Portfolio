@@ -1,0 +1,86 @@
+body {
+    width: 1400px;
+    height:auto;
+    margin:50px auto;
+}
+
+.header {
+    padding:0px 25px;
+    display:flex;
+    justify-content: space-between;
+}
+
+/* #move_num, #gold_amt {
+    
+} */
+
+#gold-box {
+    display:inline;
+    border-color: black;
+    border-style: solid;
+    width:250px;
+    height:20px;
+}
+
+.container {
+    background-color: darkcyan;
+    color:black;
+    margin:auto;
+    text-align: center;
+    padding:30px;
+}
+
+.action-row {
+    display: flex;
+}
+
+.action-box, .text-box {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    margin:10px;
+    padding:20px;
+    background-color: white;
+}
+
+.action-box {
+    flex: 1;
+}
+
+.text-box {
+    min-height: 250px;
+    text-align: left;
+}
+
+.rj {
+    text-align: left;
+}
+
+.btn {
+    color:black;
+    background-color: goldenrod;
+}
+
+.loss {
+    color:red;
+}
+
+.gain {
+    color:green;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.reset_button {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    background-color: aqua;
+    width: 150px;
+    margin:auto;
+    padding: 15px 5px;
+}
